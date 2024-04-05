@@ -1,9 +1,7 @@
 <?php
-// Установка даты по умолчанию, если не указана
 $startDate = isset($_GET['startDate']) ? $_GET['startDate'] : date('Y-m-d 00:00:00');
 $endDate = isset($_GET['endDate']) ? $_GET['endDate'] : date('Y-m-d 23:59:59');
 
-// Данные для запроса
 $data = [
     'date_from' => $startDate,
     'date_to' => $endDate,
@@ -11,7 +9,6 @@ $data = [
     'limit' => 100
 ];
 
-// Выполнение запроса на получение статусов лида
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -34,6 +31,5 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 
-// Вывод ответа
 echo $response;
 ?>

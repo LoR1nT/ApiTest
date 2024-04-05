@@ -1,11 +1,9 @@
 <?php
-// Получение данных из формы
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 
-// Данные для запроса
 $data = [
     'firstName' => $firstName,
     'lastName' => $lastName,
@@ -19,7 +17,6 @@ $data = [
     'language' => 'en',
 ];
 
-// Выполнение запроса на добавление лида
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -42,7 +39,6 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 
-// Переадресация обратно на страницу добавления лида
 header("Location: index.html");
 exit();
 ?>
