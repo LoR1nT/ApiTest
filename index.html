@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Lead</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Add Lead</a></li>
+            <li><a href="lead-status.html">Lead Status</a></li>
+        </ul>
+    </nav>
+</header>
+<h1>Add Lead</h1>
+<form id="leadForm" action="add_lead.php" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+<script src="scripts.js"></script>
+</body>
+</html>
